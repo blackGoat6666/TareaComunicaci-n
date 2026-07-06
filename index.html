@@ -1,489 +1,537 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Viajá a Nueva Zelanda | Estudiá y Trabajá</title>
+    <title>Viajá a Nueva Zelanda | Estudiá y Trabajá</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
 
-<style>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-}
+        body {
+            background: #f8f9fb;
+            color: #222;
+            line-height: 1.6;
+        }
 
-body{
-background:#f8f9fb;
-color:#222;
-line-height:1.6;
-}
+        a {
+            text-decoration: none;
+        }
 
-a{
-text-decoration:none;
-}
+        header {
 
-header{
+            height: 100vh;
 
-height:100vh;
+            background:
+                linear-gradient(rgba(0, 24, 74, .65), rgba(0, 24, 74, .75)),
+                url("https://images.unsplash.com/photo-1507699622108-4be3abd695ad?auto=format&fit=crop&w=1800&q=80");
 
-background:
-linear-gradient(rgba(0,24,74,.65),rgba(0,24,74,.75)),
-url("https://images.unsplash.com/photo-1507699622108-4be3abd695ad?auto=format&fit=crop&w=1800&q=80");
+            background-size: cover;
+            background-position: center;
 
-background-size:cover;
-background-position:center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
-display:flex;
-align-items:center;
-justify-content:center;
+            text-align: center;
+            color: white;
+            padding: 20px;
+        }
 
-text-align:center;
-color:white;
-padding:20px;
-}
+        .hero {
+            max-width: 900px;
+        }
 
-.hero{
-max-width:900px;
-}
+        .hero h1 {
 
-.hero h1{
+            font-size: 60px;
+            font-weight: 800;
+            margin-bottom: 20px;
 
-font-size:60px;
-font-weight:800;
-margin-bottom:20px;
+        }
 
-}
+        .hero p {
 
-.hero p{
+            font-size: 22px;
+            margin-bottom: 35px;
 
-font-size:22px;
-margin-bottom:35px;
+        }
 
-}
+        .buttons {
 
-.buttons{
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
 
-display:flex;
-gap:20px;
-justify-content:center;
-flex-wrap:wrap;
+        }
 
-}
+        .btn {
 
-.btn{
+            padding: 16px 34px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: .3s;
 
-padding:16px 34px;
-border-radius:50px;
-font-weight:600;
-transition:.3s;
+        }
 
-}
+        .primary {
 
-.primary{
+            background: #e51b38;
+            color: white;
 
-background:#e51b38;
-color:white;
+        }
 
-}
+        .primary:hover {
 
-.primary:hover{
+            background: #c80d2a;
 
-background:#c80d2a;
+        }
 
-}
+        .secondary {
 
-.secondary{
+            border: 2px solid white;
+            color: white;
 
-border:2px solid white;
-color:white;
+        }
 
-}
+        .secondary:hover {
 
-.secondary:hover{
+            background: white;
+            color: #0b2d74;
 
-background:white;
-color:#0b2d74;
+        }
 
-}
+        section {
 
-section{
+            padding: 90px 10%;
 
-padding:90px 10%;
+        }
 
-}
+        .section-title {
 
-.section-title{
+            text-align: center;
+            font-size: 40px;
+            color: #0b2d74;
+            margin-bottom: 15px;
 
-text-align:center;
-font-size:40px;
-color:#0b2d74;
-margin-bottom:15px;
+        }
 
-}
+        .section-subtitle {
 
-.section-subtitle{
+            text-align: center;
+            margin-bottom: 60px;
+            color: #555;
 
-text-align:center;
-margin-bottom:60px;
-color:#555;
+        }
 
-}
+        .grid {
 
-.grid{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
 
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:30px;
+        }
 
-}
+        .grid2 {
 
-.card{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
 
-background:white;
-padding:35px;
-border-radius:15px;
-box-shadow:0 10px 30px rgba(0,0,0,.08);
+        .card {
 
-}
+            background: white;
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, .08);
 
-.card h3{
+        }
 
-margin-bottom:15px;
-color:#0b2d74;
+        .card h3 {
 
-}
+            margin-bottom: 15px;
+            color: #0b2d74;
 
-.steps{
+        }
 
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:25px;
+        .steps {
 
-}
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
 
-.step{
+        }
 
-background:white;
-padding:30px;
-border-radius:15px;
-position:relative;
+        .step {
 
-box-shadow:0 10px 25px rgba(0,0,0,.08);
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            position: relative;
 
-}
+            box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
 
-.number{
+        }
 
-width:50px;
-height:50px;
+        .number {
 
-background:#e51b38;
-color:white;
+            width: 50px;
+            height: 50px;
 
-border-radius:50%;
+            background: #e51b38;
+            color: white;
 
-display:flex;
-align-items:center;
-justify-content:center;
+            border-radius: 50%;
 
-font-size:20px;
-font-weight:bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
-margin-bottom:20px;
+            font-size: 20px;
+            font-weight: bold;
 
-}
+            margin-bottom: 20px;
 
-.cta{
+        }
 
-background:#0b2d74;
-color:white;
-text-align:center;
+        .cta {
 
-}
+            background: #0b2d74;
+            color: white;
+            text-align: center;
 
-.cta h2{
+        }
 
-font-size:42px;
-margin-bottom:20px;
+        .cta h2 {
 
-}
+            font-size: 42px;
+            margin-bottom: 20px;
 
-.cta p{
+        }
 
-margin-bottom:35px;
+        .cta p {
 
-}
+            margin-bottom: 35px;
 
-footer{
+        }
 
-background:#06163d;
-color:white;
-padding:40px;
-text-align:center;
+        footer {
 
-}
+            background: #06163d;
+            color: white;
+            padding: 40px;
+            text-align: center;
 
-footer p{
+        }
 
-margin:8px 0;
+        footer p {
 
-}
+            margin: 8px 0;
 
-.testimonial{
+        }
 
-font-style:italic;
+        .testimonial {
 
-}
+            font-style: italic;
 
-.faq details{
+        }
 
-background:white;
-padding:20px;
-margin-bottom:15px;
-border-radius:10px;
-box-shadow:0 5px 20px rgba(0,0,0,.08);
+        .faq details {
 
-}
+            background: white;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, .08);
 
-summary{
+        }
 
-cursor:pointer;
-font-weight:600;
+        summary {
 
-}
+            cursor: pointer;
+            font-weight: 600;
 
-@media(max-width:768px){
+        }
 
-.hero h1{
+        @media(max-width:768px) {
 
-font-size:40px;
+            .hero h1 {
 
-}
+                font-size: 40px;
 
-.hero p{
+            }
 
-font-size:18px;
+            .hero p {
 
-}
+                font-size: 18px;
 
-.section-title{
+            }
 
-font-size:32px;
+            .section-title {
 
-}
+                font-size: 32px;
 
-}
+            }
 
-</style>
+        }
+    </style>
 
 </head>
 
 <body>
 
-<header>
+    <header>
 
-<div class="hero">
+        <div class="hero">
 
-<h1>Viví, Estudiá y Trabajá en Nueva Zelanda 🇳🇿</h1>
+            <h1>Trabajá y viví una experiencia en Nueva Zelanda 🇳🇿</h1>
 
-<p>Nos ocupamos de todo el proceso para que puedas cumplir tu sueño de vivir una experiencia internacional.</p>
+            <p>Te acompañamos en cada paso para que viajes con seguridad. Gestionamos empleo, visa, alojamiento,
+                seguros, cuenta bancaria y toda la documentación necesaria.</p>
 
-<div class="buttons">
+            <div class="buttons">
 
-<a href="#" class="btn primary">Quiero Asesoramiento</a>
+                <a href="#" class="btn primary">Quiero Asesoramiento</a>
 
-<a href="#" class="btn secondary">Hablar por WhatsApp</a>
+                <a href="#" class="btn secondary">Hablar por WhatsApp</a>
 
-</div>
+            </div>
 
-</div>
+        </div>
 
-</header>
+    </header>
 
-<section>
+    <section>
 
-<h2 class="section-title">¿Por qué elegir Nueva Zelanda?</h2>
+        <h2 class="section-title">¿Por qué elegir Nueva Zelanda?</h2>
 
-<p class="section-subtitle">
-Uno de los mejores destinos del mundo para estudiar, trabajar y mejorar tu calidad de vida.
-</p>
+        <p class="section-subtitle">
+            Uno de los mejores destinos del mundo para estudiar, trabajar y mejorar tu calidad de vida.
+        </p>
 
-<div class="grid">
+        <div class="grid">
 
-<div class="card">
-<h3>💼 Trabajo</h3>
-<p>Accedé a oportunidades laborales mientras estudiás.</p>
-</div>
+            <div class="card">
+                <h3>💼 Trabajo</h3>
+                <p>Accedé a oportunidades laborales mientras estudiás.</p>
+            </div>
 
-<div class="card">
-<h3>🎓 Educación</h3>
-<p>Instituciones reconocidas internacionalmente.</p>
-</div>
+            <div class="card">
+                <h3>🎓 Educación</h3>
+                <p>Instituciones reconocidas internacionalmente.</p>
+            </div>
 
-<div class="card">
-<h3>🌎 Calidad de vida</h3>
-<p>Seguridad, naturaleza y excelentes salarios.</p>
-</div>
+            <div class="card">
+                <h3>🌎 Calidad de vida</h3>
+                <p>Seguridad, naturaleza y excelentes salarios.</p>
+            </div>
 
-<div class="card">
-<h3>🇬🇧 Inglés</h3>
-<p>Mejorá tu idioma viviendo una experiencia real.</p>
-</div>
+            <div class="card">
+                <h3>🇬🇧 Inglés</h3>
+                <p>Mejorá tu idioma viviendo una experiencia real.</p>
+            </div>
 
-</div>
+        </div>
 
-</section>
+    </section>
 
-<section style="background:#eef4ff;">
+    <section style="background:#eef4ff;">
 
-<h2 class="section-title">Nosotros simplificamos todo</h2>
+        <h2 class="section-title">Nosotros simplificamos todo</h2>
 
-<div class="grid">
+        <div class="grid2">
 
-<div class="card">
-<h3>📄 Documentación</h3>
-<p>Te guiamos durante todo el trámite.</p>
-</div>
+            <div class="card">
+                <h3>💼 Búsqueda de empleo</h3>
+                <p>Te conectamos con oportunidades laborales legítimas en Nueva Zelanda.</p>
+            </div>
 
-<div class="card">
-<h3>🏠 Alojamiento</h3>
-<p>Te ayudamos a conseguir dónde vivir.</p>
-</div>
+            <div class="card">
+                <h3>🛂 Gestión de visa</h3>
+                <p>Realizamos el asesoramiento para que presentes la documentación correctamente.</p>
+            </div>
 
-<div class="card">
-<h3>💼 Trabajo</h3>
-<p>Orientación laboral al llegar.</p>
-</div>
+            <div class="card">
+                <h3>🏦 Cuenta bancaria</h3>
+                <p>Te ayudamos a abrir tu cuenta para comenzar a trabajar rápidamente.</p>
+            </div>
 
-<div class="card">
-<h3>✈ Viaje</h3>
-<p>Preparación completa antes de viajar.</p>
-</div>
+            <div class="card">
+                <h3>🛡 Seguro</h3>
+                <p>Gestionamos el seguro necesario para tu estadía.</p>
+            </div>
 
-</div>
+            <div class="card">
+                <h3>🏠 Alojamiento</h3>
+                <p>Te ayudamos a encontrar un lugar seguro donde vivir.</p>
+            </div>
 
-</section>
+            <div class="card">
+                <h3>🤝 Integración cultural</h3>
+                <p>Te vinculamos con comunidades latinas y neozelandesas para facilitar tu adaptación.</p>
+            </div>
+        </div>
 
-<section>
+    </section>
 
-<h2 class="section-title">¿Cómo funciona?</h2>
+    <section>
 
-<div class="steps">
+        <h2 class="section-title">¿Por qué elegirnos?</h2>
 
-<div class="step">
-<div class="number">1</div>
-<h3>Consulta</h3>
-<p>Analizamos tu perfil.</p>
-</div>
+        <div class="grid">
 
-<div class="step">
-<div class="number">2</div>
-<h3>Plan</h3>
-<p>Elegimos el programa ideal.</p>
-</div>
+            <div class="card">
+                <h3>✔ Información confiable</h3>
+                <p>Evitá errores durante todo el proceso.</p>
+            </div>
 
-<div class="step">
-<div class="number">3</div>
-<h3>Gestión</h3>
-<p>Realizamos toda la documentación.</p>
-</div>
+            <div class="card">
+                <h3>✔ Asesoramiento personalizado</h3>
+                <p>Cada persona recibe un plan adaptado a su perfil.</p>
+            </div>
 
-<div class="step">
-<div class="number">4</div>
-<h3>Viajá</h3>
-<p>Comenzá tu nueva experiencia.</p>
-</div>
+            <div class="card">
+                <h3>✔ Trámites simplificados</h3>
+                <p>Nos encargamos de la documentación para que viajes con tranquilidad.</p>
+            </div>
 
-</div>
+            <div class="card">
+                <h3>✔ Oportunidades reales</h3>
+                <p>Trabajamos con empleadores y programas confiables.</p>
+            </div>
 
-</section>
+        </div>
 
-<section style="background:#eef4ff;">
+    </section>
 
-<h2 class="section-title">Lo que dicen nuestros viajeros</h2>
+    <section>
 
-<div class="grid">
+        <h2 class="section-title">¿Cómo funciona?</h2>
 
-<div class="card testimonial">
-⭐⭐⭐⭐⭐
-<p>"En menos de tres meses estaba viviendo en Auckland."</p>
-<strong>- Sofía</strong>
-</div>
+        <div class="steps">
 
-<div class="card testimonial">
-⭐⭐⭐⭐⭐
-<p>"Me ayudaron desde la visa hasta conseguir alojamiento."</p>
-<strong>- Nicolás</strong>
-</div>
+            <div class="step">
+                <div class="number">1</div>
+                <h3>Solicitá información</h3>
+                <p>Analizamos tu perfil.</p>
+            </div>
 
-<div class="card testimonial">
-⭐⭐⭐⭐⭐
-<p>"Excelente atención durante todo el proceso."</p>
-<strong>- Camila</strong>
-</div>
+            <div class="step">
+                <div class="number">2</div>
+                <h3>Planificamos tu viaje</h3>
+                <p>Elegimos las mejores oportunidades.</p>
+            </div>
 
-</div>
+            <div class="step">
+                <div class="number">3</div>
+                <h3>Gestionamos los trámites</h3>
+                <p>Visa, empleo, seguros, alojamiento y documentación.</p>
+            </div>
 
-</section>
+            <div class="step">
+                <div class="number">4</div>
+                <h3>Comenzá tu experiencia</h3>
+                <p>Te acompañamos incluso después de llegar.</p>
+            </div>
 
-<section>
+        </div>
 
-<h2 class="section-title">Preguntas frecuentes</h2>
+    </section>
 
-<div class="faq">
+    <section style="background:#eef4ff;">
 
-<details>
-<summary>¿Necesito saber inglés?</summary>
-<p>No necesariamente. Dependerá del programa elegido.</p>
-</details>
+        <h2 class="section-title">Lo que dicen nuestros viajeros</h2>
 
-<details>
-<summary>¿Puedo trabajar mientras estudio?</summary>
-<p>Sí, muchos programas lo permiten.</p>
-</details>
+        <div class="grid">
 
-<details>
-<summary>¿Me ayudan con el alojamiento?</summary>
-<p>Sí, ofrecemos asesoramiento para conseguir alojamiento.</p>
-</details>
+            <div class="card testimonial">
+                ⭐⭐⭐⭐⭐
+                <p>"En menos de tres meses estaba viviendo en Auckland."</p>
+                <strong>- Sofía</strong>
+            </div>
 
-<details>
-<summary>¿Qué incluye el servicio?</summary>
-<p>Asesoramiento, documentación, alojamiento y orientación laboral.</p>
-</details>
+            <div class="card testimonial">
+                ⭐⭐⭐⭐⭐
+                <p>"Me ayudaron desde la visa hasta conseguir alojamiento."</p>
+                <strong>- Nicolás</strong>
+            </div>
 
-</div>
+            <div class="card testimonial">
+                ⭐⭐⭐⭐⭐
+                <p>"Excelente atención durante todo el proceso."</p>
+                <strong>- Camila</strong>
+            </div>
 
-</section>
+        </div>
 
-<section class="cta">
+    </section>
 
-<h2>Tu nueva vida empieza hoy.</h2>
+    <section>
 
-<p>Solicitá una asesoría gratuita y descubrí cómo podemos ayudarte.</p>
+        <h2 class="section-title">Preguntas frecuentes</h2>
 
-<a href="#" class="btn primary">Empezar Ahora</a>
+        <div class="faq">
 
-</section>
+            <details>
+                <summary>¿Necesito saber inglés?</summary>
+                <p>No necesariamente. Dependerá del programa elegido.</p>
+            </details>
 
-<footer>
+            <details>
+                <summary>¿Puedo trabajar mientras estudio?</summary>
+                <p>Sí, muchos programas lo permiten.</p>
+            </details>
 
-<h3>VIAJACON</h3>
+            <details>
+                <summary>¿Me ayudan con el alojamiento?</summary>
+                <p>Sí, ofrecemos asesoramiento para conseguir alojamiento.</p>
+            </details>
 
-<p>Especialistas en programas para estudiar y trabajar en Nueva Zelanda.</p>
+            <details>
+                <summary>¿Qué incluye el servicio?</summary>
+                <p>Asesoramiento, documentación, alojamiento y orientación laboral.</p>
+            </details>
 
-<p>🌐 www.viajacon-.com</p>
+        </div>
 
-<p>📧 viajecon-@viaje.com</p>
+    </section>
 
-<p>📱 +54 299 478 9123</p>
+    <section class="cta">
 
-</footer>
+        <h2>Tu nueva vida empieza hoy.</h2>
+
+        <p>Solicitá una asesoría gratuita y descubrí cómo podemos ayudarte.</p>
+
+        <a href="#" class="btn primary">Empezar Ahora</a>
+
+    </section>
+
+    <footer>
+
+        <h3>VIAJACON</h3>
+
+        <p>Especialistas en programas para estudiar y trabajar en Nueva Zelanda.</p>
+
+        <p>🌐 www.viajacon-.com</p>
+
+        <p>📧 viajecon-@viaje.com</p>
+
+        <p>📱 +54 299 478 9123</p>
+
+    </footer>
 
 </body>
+
 </html>
