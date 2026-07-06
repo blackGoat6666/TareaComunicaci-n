@@ -286,6 +286,81 @@
             }
 
         }
+
+
+        .testimonial {
+            text-align: center;
+        }
+
+        .testimonial img {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border: 4px solid #0b2d74;
+        }
+
+        .stars {
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+
+        .testimonial p {
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+
+        .testimonial strong {
+            color: #0b2d74;
+        }
+
+        .carousel {
+            display: flex;
+            gap: 25px;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            padding: 15px 5px 25px;
+        }
+
+        .carousel::-webkit-scrollbar {
+            height: 10px;
+        }
+
+        .carousel::-webkit-scrollbar-thumb {
+            background: #0b2d74;
+            border-radius: 10px;
+        }
+
+        .carousel-card {
+            min-width: 320px;
+            background: #fff;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, .1);
+            flex-shrink: 0;
+            transition: .3s;
+        }
+
+        .carousel-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .carousel-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .carousel-card h3 {
+            padding: 20px 20px 10px;
+            color: #0b2d74;
+        }
+
+        .carousel-card p {
+            padding: 0 20px 20px;
+            color: #555;
+        }
     </style>
 
 </head>
@@ -305,8 +380,6 @@
 
                 <a href="#" class="btn primary">Quiero Asesoramiento</a>
 
-                <a href="#" class="btn secondary">Hablar por WhatsApp</a>
-
             </div>
 
         </div>
@@ -321,26 +394,48 @@
             Uno de los mejores destinos del mundo para estudiar, trabajar y mejorar tu calidad de vida.
         </p>
 
-        <div class="grid">
+        <div class="carousel">
 
-            <div class="card">
-                <h3>💼 Trabajo</h3>
-                <p>Accedé a oportunidades laborales mientras estudiás.</p>
+            <div class="carousel-card">
+                <img src="https://images.unsplash.com/photo-1469521669194-babb45599def?auto=format&fit=crop&w=600&q=80"
+                    alt="Milford Sound">
+                <h3>🏔 Milford Sound</h3>
+                <p>Uno de los paisajes naturales más famosos del país.</p>
             </div>
 
-            <div class="card">
-                <h3>🎓 Educación</h3>
-                <p>Instituciones reconocidas internacionalmente.</p>
+            <div class="carousel-card">
+                <img src="https://images.unsplash.com/photo-1605581810243-b1f6d8b6e1d3?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D?auto=format&fit=crop&w=600&q=80"
+                    alt="Cultura Maorí">
+                <h3>🪶 Cultura Maorí</h3>
+                <p>Conocé las tradiciones y la historia del pueblo originario.</p>
             </div>
 
-            <div class="card">
-                <h3>🌎 Calidad de vida</h3>
-                <p>Seguridad, naturaleza y excelentes salarios.</p>
+            <div class="carousel-card">
+                <img src="https://images.unsplash.com/photo-1507699622108-4be3abd695ad?auto=format&fit=crop&w=600&q=80"
+                    alt="Auckland">
+                <h3>🌆 Auckland</h3>
+                <p>La ciudad más grande, con gran oferta laboral y educativa.</p>
             </div>
 
-            <div class="card">
-                <h3>🇬🇧 Inglés</h3>
-                <p>Mejorá tu idioma viviendo una experiencia real.</p>
+            <div class="carousel-card">
+                <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=600&q=80"
+                    alt="Hobbiton">
+                <h3>🎬 Hobbiton</h3>
+                <p>El famoso escenario de El Señor de los Anillos y El Hobbit.</p>
+            </div>
+
+            <div class="carousel-card">
+                <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=600&q=80"
+                    alt="Naturaleza">
+                <h3>🌿 Naturaleza</h3>
+                <p>Parques nacionales, lagos y montañas únicas en el mundo.</p>
+            </div>
+
+            <div class="carousel-card">
+                <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80"
+                    alt="Playas">
+                <h3>🏖 Playas</h3>
+                <p>Costa extensa ideal para deportes acuáticos y turismo.</p>
             </div>
 
         </div>
@@ -416,7 +511,7 @@
 
     </section>
 
-    <section>
+    <section style="background:#f7ebeb;">
 
         <h2 class="section-title">¿Cómo funciona?</h2>
 
@@ -457,20 +552,35 @@
         <div class="grid">
 
             <div class="card testimonial">
-                ⭐⭐⭐⭐⭐
+                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=300&q=80"
+                    alt="Sofía">
+
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+
                 <p>"En menos de tres meses estaba viviendo en Auckland."</p>
+
                 <strong>- Sofía</strong>
             </div>
 
             <div class="card testimonial">
-                ⭐⭐⭐⭐⭐
+                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=300&q=80"
+                    alt="Nicolás">
+
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+
                 <p>"Me ayudaron desde la visa hasta conseguir alojamiento."</p>
+
                 <strong>- Nicolás</strong>
             </div>
 
             <div class="card testimonial">
-                ⭐⭐⭐⭐⭐
+                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=300&q=80"
+                    alt="Camila">
+
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+
                 <p>"Excelente atención durante todo el proceso."</p>
+
                 <strong>- Camila</strong>
             </div>
 
@@ -520,13 +630,11 @@
 
     <footer>
 
-        <h3>VIAJACON</h3>
+        <h3>VIAJA CON NZTRAVEL</h3>
 
-        <p>Especialistas en programas para estudiar y trabajar en Nueva Zelanda.</p>
+        <p>Viaja hoy a Nueva Zelanda.</p>
 
-        <p>🌐 www.viajacon-.com</p>
-
-        <p>📧 viajecon-@viaje.com</p>
+        <p>📧 NZTRAVEL@viaje.com</p>
 
         <p>📱 +54 299 478 9123</p>
 
